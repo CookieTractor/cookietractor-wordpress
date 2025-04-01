@@ -12,7 +12,7 @@ class Frontend {
 
         if(is_front_page() && !empty($website_key)) {
         ?>
-        <script src="https://cdn.cookietractor.com/cookietractor.js" data-lang="<?= str_replace('_','-',get_locale())?>" data-id="<?=$website_key?>"></script>
+          <script src="https://cdn.cookietractor.com/cookietractor.js" data-lang="<?= str_replace('_','-',get_locale())?>" data-id="<?=$website_key?>"></script>
         <?
         }
 
