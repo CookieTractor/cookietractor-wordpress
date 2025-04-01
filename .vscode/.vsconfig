@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "components": [    
+  ],
+  "extensions": [    
+    "https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client",
+    "https://marketplace.visualstudio.com/items?itemName=xdebug.php-pack",
+    "https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug"
+  ]
+}
