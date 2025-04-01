@@ -1,0 +1,17 @@
+{
+  "name": "cookie-tractor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && SET build_mode=production && vite build --emptyOutDir",
+    "watch": "tsc && SET build_mode=development && vite build --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "sass": "^1.86.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  }
+}

@@ -14,7 +14,7 @@ class CookieTractor {
         //      we should PROBABLY have settings for these as well.
 
         $settings = new Settings();
-        $settings->add_menu();
+        $settings->init();
 
         $frontend = new Frontend();
         $frontend->init();
@@ -30,7 +30,7 @@ class CookieTractor {
 
     }
 
-   
+
 
 
 }
