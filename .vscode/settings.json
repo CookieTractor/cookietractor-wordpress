@@ -1,5 +1,13 @@
 {
-    "cSpell.words": [
-        "atts"
-    ]
+  "files.exclude": {
+    "node_modules": true,
+    "plugin/assets/bundles": true
+  },
+  "cSpell.words": [
+    "atts"
+  ],
+  "intelephense.environment.includePaths": [
+    "vendor/wordpress-stubs/wordpress-stubs.php"
+  ]
+
 }
