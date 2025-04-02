@@ -38,8 +38,16 @@ class Settings {
      */
     public function add_settings() {
         add_option('cookietractor_use_site_language', 'on');
-        register_setting('cookietractor', 'cookietractor_website_code');
-        register_setting('cookietractor', 'cookietractor_use_site_language');
+        register_setting('cookietractor', 'cookietractor_website_code','string');
+        register_setting('cookietractor', 'cookietractor_use_site_language','string');
+    }
+
+    public function cookietractor_sanitize_website_code($input){
+        return $input;
+    }
+
+    public function cookietractor_use_site_language($input){
+        return $input;
     }
 
     public function enqueue_admin_styles() {
@@ -128,7 +136,7 @@ class Settings {
 
                     <?php if($parser->websiteKey != ''){?>
                     <a href="https://app.cookietractor.com/Tool#!/website/<?php echo esc_html($parser->websiteKey)?>/overview" target="_blank">Go to website settings</a>
-                    <?php } ?>
+                    <?php }?>
                     <?php submit_button(); ?>
                 </from>
             </div>

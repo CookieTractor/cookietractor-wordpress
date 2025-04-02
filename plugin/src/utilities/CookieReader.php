@@ -7,11 +7,12 @@ class CookieReader {
      */
     public function readCookie() {
 
-        $cookieValue = wp_unslash($_COOKIE['_cc_cookieConsent']);
-
-        if(!isset($cookieValue)) {
+        if(!isset($_COOKIE['_cc_cookieConsent'])) {
             return null;
         }
+
+        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+        $cookieValue = wp_unslash($_COOKIE['_cc_cookieConsent']);
 
         $value = $cookieValue;
         $jsonObj = json_decode($value);

@@ -15,7 +15,7 @@ class Frontend {
             $parser = new WebsiteCodeParser($website_code);
 
             if($parser->websiteKey != '') {
-
+                // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
                 ?><script src="https://<?php echo esc_html($parser->cdnHost)?>/cookietractor.js" data-lang="<?php echo esc_html($parser->getCulture())?>" data-id="<?php echo esc_html($parser->websiteKey)?>"></script>
 <?php
             }
