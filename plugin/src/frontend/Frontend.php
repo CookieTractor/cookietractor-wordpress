@@ -4,7 +4,7 @@ require_once __DIR__ . './../utilities/WebsiteCodeParser.php';
 class Frontend {
 
     public function init() {
-        add_filter('wp_head', array($this,'add_cookietractor_header'), -10000);
+        add_filter('wp_head', array($this,'add_cookietractor_header'), -2147483648);
     }
 
     public function add_cookietractor_header() {

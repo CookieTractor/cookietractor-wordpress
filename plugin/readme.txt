@@ -1,4 +1,4 @@
-# CookieTractor | Cookie banner #
+# CookieTractor #
 * Contributors: cookietractor
 * Tags: cookie banner,cookie, GDPR, cookie policy, cmp,
 * Requires at least: 4.4
