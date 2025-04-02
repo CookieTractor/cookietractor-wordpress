@@ -95,11 +95,11 @@ class Settings {
 
                 <form method="post" action="options.php">
                     <?php settings_fields('cookietractor'); ?>
-                    <?if($websiteCode == ''){?>
+                    <?php if($websiteCode == ''){ ?>
                         <div class="cookietractor-alert cookietractor-alert__warning">
                             <p>Create your account at <a href="https://www.cookietractor.com/?utm_source=plugin&utm_medium=admin&utm_campaign=WordPress" target="_blank">cookietractor.com</a></p>
                         </div>
-                    <?}?>
+                    <?php } ?>
                     <table class="form-table">
 
                     <tr>
@@ -120,23 +120,22 @@ class Settings {
                             <p>Used Site Language as default language for consent screen.</p>
                         </th>
                         <td>
-                            <input type="checkbox" name="cookietractor_use_site_language" <?=$useSiteLanguage=='on' ? 'checked' : '' ?> />
+                            <input type="checkbox" name="cookietractor_use_site_language" <?php echo $useSiteLanguage=='on' ? 'checked' : '' ?> />
                         </td>
                     </tr>
 
                     </table>
 
-                    <?if($parser->websiteKey != ''){?>
-                    <a href="https://app.cookietractor.com/Tool#!/website/<?=$parser->websiteKey?>/overview" target="_blank">Go to website settings</a>
-                    <?}?>
+                    <?php if($parser->websiteKey != ''){?>
+                    <a href="https://app.cookietractor.com/Tool#!/website/<?php echo esc_html($parser->websiteKey)?>/overview" target="_blank">Go to website settings</a>
+                    <?php } ?>
                     <?php submit_button(); ?>
                 </from>
             </div>
         </div>
 
-        <?
+        <?php
 
     }
-
 }
 ?>

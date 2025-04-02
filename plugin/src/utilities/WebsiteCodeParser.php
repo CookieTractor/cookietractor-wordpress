@@ -1,4 +1,4 @@
-<?
+<?php
 
 class WebsiteCodeParser {
 
@@ -21,7 +21,7 @@ class WebsiteCodeParser {
             $this->websiteKey = $script->getAttribute('data-id');
             $this->culture = $script->getAttribute('data-lang');
 
-            $scriptUrl = parse_url($script->getAttribute('src'));
+            $scriptUrl = wp_parse_url($script->getAttribute('src'));
             $this->cdnHost = $scriptUrl['host'] ?? '';
 
         }

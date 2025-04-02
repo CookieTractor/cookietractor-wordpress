@@ -16,8 +16,8 @@ class Frontend {
 
             if($parser->websiteKey != '') {
 
-                ?><script src="https://<?=$parser->cdnHost?>/cookietractor.js" data-lang="<?=$parser->getCulture()?>" data-id="<?=$parser->websiteKey?>"></script>
-<?
+                ?><script src="https://<?php echo esc_html($parser->cdnHost)?>/cookietractor.js" data-lang="<?php echo esc_html($parser->getCulture())?>" data-id="<?php echo esc_html($parser->websiteKey)?>"></script>
+<?php
             }
         }
 
