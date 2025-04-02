@@ -18,9 +18,9 @@ class ShortcodeDeclaration {
 
         return '
         <div class="is-layout-constrained">
-         <script src="https://'.$parser->cdnHost.'/cookietractor-declaration.js" data-lang="'.$parser->getCulture().'" data-id="'.$parser->websiteKey.'" defer></script>
-         <div id="CookieDeclaration"></div>
-         </div>
+            <script src="https://'.$parser->cdnHost.'/cookietractor-declaration.js" data-lang="'.$parser->getCulture().'" data-id="'.$parser->websiteKey.'" defer></script>
+            <div id="CookieDeclaration"></div>
+        </div>
         ';
 
     }
