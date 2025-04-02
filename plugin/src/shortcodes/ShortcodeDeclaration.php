@@ -1,4 +1,5 @@
 <?
+require_once __DIR__ . './../utilities/WebsiteCodeParser.php';
 
 class ShortcodeDeclaration {
 
@@ -8,12 +9,18 @@ class ShortcodeDeclaration {
 
     public function cookietractor_shortcode()
     {
-        $website_key = get_option('cookietractor_website_key');
-        $locale = str_replace('_','-',get_locale());
+        $website_code = get_option('cookietractor_website_code');
+
+        if($website_code == '')
+            return 'No website code configured.';
+
+        $parser = new WebsiteCodeParser($website_code);
 
         return '
-         <script src="https://cdn.cookietractor.com/cookietractor-declaration.js" data-lang="'.$locale.'" data-id="'.$website_key.'" defer></script>
+        <div class="is-layout-constrained">
+         <script src="https://'.$parser->cdnHost.'/cookietractor-declaration.js" data-lang="'.$parser->getCulture().'" data-id="'.$parser->websiteKey.'" defer></script>
          <div id="CookieDeclaration"></div>
+         </div>
         ';
 
     }

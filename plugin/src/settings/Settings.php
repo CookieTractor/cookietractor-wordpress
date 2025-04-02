@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . './../utilities/WebsiteCodeParser.php';
+
 class Settings {
 
     const CT_ICON = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0iI2E3YWFhZCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzY0ODFfMzE4MTUpIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTguNSwxOS4xYy00LjcsMC04LjUsMy44LTguNSw4LjVzMy44LDguNSw4LjUsOC41LDguNS0zLjgsOC41LTguNS0zLjgtOC41LTguNS04LjVaTTguNSwzMi4yYy0yLjYsMC00LjYtMi4xLTQuNi00LjZzMi4xLTQuNiw0LjYtNC42LDQuNiwyLjEsNC42LDQuNi0yLDQuNi00LjYsNC42Wk0zMi45LDIzYy0zLjYsMC02LjUsMi45LTYuNSw2LjVzMi45LDYuNSw2LjUsNi41LDYuNS0yLjksNi41LTYuNS0yLjktNi41LTYuNS02LjVaTTMyLjksMzIuNmMtMS43LDAtMy4xLTEuNC0zLjEtMy4xczEuNC0zLjEsMy4xLTMuMSwzLjEsMS40LDMuMSwzLjEtMS40LDMuMS0zLjEsMy4xWk0zMi45LDIxLjNjMS41LDAsMi45LjQsNC4xLDEuMS4yLDAsLjMuMi40LDAsMCwwLDAtLjIsMC0uNHYtNC4xYzAtLjUtLjMtMS0uOS0xLjEtNC41LTEuMy04LjctMi0xMS4yLTIuNC0uMiwwLS4zLDAtLjQtLjJzLS4xLS4yLS4xLS40Yy0uMi0xLjktLjYtNC43LTEtOC41LDAtLjgtLjgtMS40LTEuNi0xLjRoLTEyLjljLS44LDAtMS41LjYtMS42LDEuNC0uNSwzLjgtLjksNi42LTEuMSw4LjUsMCwuMiwwLC4zLS4yLjQtLjEuMS0uMy4yLS40LjItMiwuNC0zLjUuOS00LjksMi0uNy41LS44LDEuNS0uMywyLjIuNS43LDEuMy44LDEuNy41LDEuNy0xLjQsMy42LTEuOSw1LjktMS45LDUuOCwwLDExLjEsNSwxMCwxMiwwLC4xLDAsLjIsMCwuMywwLDAsLjEsMCwuMywwaDUuNWMuMSwwLC4yLDAsLjMsMCwwLDAsMC0uMiwwLS4zLjEtNC41LDMuOC04LDguMi04Wk0xOC43LDE5Yy0uMSwwLS4yLS4xLS4zLS4yLTIuMS0yLjMtNC45LTMuOS04LjEtNC4zLS4yLDAtLjMsMC0uMy0uMiwwLDAtLjEtLjIsMC0uNC40LTIuNy42LTQuOC44LTYuMiwwLS4yLDAtLjMuMi0uNCwwLDAsLjItLjEuNCwwaDkuMWMuMiwwLC4zLDAsLjQuMSwwLDAsLjEuMi4yLjRsMS4zLDExYzAsLjEsMCwuMiwwLC4yLDAsMC0uMS4xLS4yLjFoLTIuOWMtLjEsMC0uMiwwLS40LDBaIiBmaWxsPSIjYTdhYWFkIiAvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzY0ODFfMzE4MTUiPgo8cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9IiNhN2FhYWQiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4=';
@@ -35,12 +37,14 @@ class Settings {
      * Adds settings to what we can store them in WordPress
      */
     public function add_settings() {
-        register_setting('cookietractor', 'cookietractor_website_key');
+        add_option('cookietractor_use_site_language', 'on');
+        register_setting('cookietractor', 'cookietractor_website_code');
+        register_setting('cookietractor', 'cookietractor_use_site_language');
     }
 
     public function enqueue_admin_styles() {
         wp_enqueue_style(
-            'my-plugin-admin-css',
+            'cookietractor-admin-css',
             plugin_dir_url(COOKIETRACTOR_MAIN_FILE) . 'assets/bundles/style.css',
             [],
             '1.0.0'
@@ -61,7 +65,9 @@ class Settings {
      */
     public function cookietractor_page() {
 
-        $websiteKey = get_option('cookietractor_website_key');
+        $websiteCode = get_option('cookietractor_website_code');
+        $useSiteLanguage = get_option('cookietractor_use_site_language');
+        $parser = new WebsiteCodeParser($websiteCode);
 
         ?>
 
@@ -71,7 +77,7 @@ class Settings {
                     <h2>CookieTractor Settings</h2>
                 </div>
                 <div>
-                <a href="https://www.cookietractor.com" target="_blank">
+                <a href="https://www.cookietractor.com/?utm_source=plugin&utm_medium=admin&utm_campaign=WordPress" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="280px" height="41px" viewBox="0 0 280 41" version="1.1">
                 <title>cookietractor_logo</title>
                 <g id="cookietractor_logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -89,24 +95,39 @@ class Settings {
 
                 <form method="post" action="options.php">
                     <?php settings_fields('cookietractor'); ?>
-                    <?if($websiteKey == ''){?>
-                        <p>Create your account at <a href="https://www.cookietractor.com" target="_blank">cookietractor.com</a></p>
+                    <?if($websiteCode == ''){?>
+                        <div class="cookietractor-alert cookietractor-alert__warning">
+                            <p>Create your account at <a href="https://www.cookietractor.com/?utm_source=plugin&utm_medium=admin&utm_campaign=WordPress" target="_blank">cookietractor.com</a></p>
+                        </div>
                     <?}?>
                     <table class="form-table">
 
                     <tr>
                         <th>
-                            <label for="websitekey">Website Key:</label>
+                            <label for="websitekey">Website code:</label>
+                            <p>Paste your installation code</p>
                         </th>
                         <td>
-                            <input type = 'text' class="regular-text" id="websitekey" name="cookietractor_website_key" value="<?php echo get_option('cookietractor_website_key'); ?>">
+                            <textarea name="cookietractor_website_code"
+                                placeholder="E.g: &lt;script src=&quot;https://cdn.cookietractor.com/cookietractor.js&quot; data-lang=&quot;en-US&quot; data-id=&quot;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;&gt;&lt;/script&gt;"
+                                class="large-text code"><?php echo esc_html(get_option('cookietractor_website_code')); ?></textarea>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="websitekey">Use Site Language</label>
+                            <p>Used Site Language as default language for consent screen.</p>
+                        </th>
+                        <td>
+                            <input type="checkbox" name="cookietractor_use_site_language" <?=$useSiteLanguage=='on' ? 'checked' : '' ?> />
                         </td>
                     </tr>
 
                     </table>
 
-                    <?if($websiteKey != ''){?>
-                    <a href="https://app.cookietractor.com/Tool#!/website/<?=$websiteKey?>/overview" target="_blank">Go to website settings</a>
+                    <?if($parser->websiteKey != ''){?>
+                    <a href="https://app.cookietractor.com/Tool#!/website/<?=$parser->websiteKey?>/overview" target="_blank">Go to website settings</a>
                     <?}?>
                     <?php submit_button(); ?>
                 </from>
