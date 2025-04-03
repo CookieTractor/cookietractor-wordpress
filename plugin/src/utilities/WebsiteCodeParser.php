@@ -1,4 +1,7 @@
 <?php
+namespace CookieTractor\Utilities;
+
+use DOMDocument;
 
 class WebsiteCodeParser {
 
@@ -25,7 +28,7 @@ class WebsiteCodeParser {
             $this->cdnHost = $scriptUrl['host'] ?? '';
 
         }
-        catch(Throwable $e){
+        catch(\Throwable $e){
 
             $this->websiteKey='';
             $this->src='';

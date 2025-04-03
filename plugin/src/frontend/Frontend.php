@@ -1,4 +1,8 @@
 <?php
+namespace CookieTractor\Frontend;
+
+use CookieTractor\Utilities\WebsiteCodeParser;
+
 require_once __DIR__ . './../utilities/WebsiteCodeParser.php';
 
 class Frontend {

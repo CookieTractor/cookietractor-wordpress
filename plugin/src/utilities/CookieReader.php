@@ -1,4 +1,5 @@
 <?php
+namespace CookieTractor\Utilities;
 
 class CookieReader {
 

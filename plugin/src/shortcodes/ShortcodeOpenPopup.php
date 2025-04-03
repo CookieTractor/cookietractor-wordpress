@@ -1,5 +1,7 @@
 <?php
 
+namespace CookieTractor\Shortcodes;
+
 class ShortcodeOpenPopup {
 
     public function init(){

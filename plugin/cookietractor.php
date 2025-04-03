@@ -14,7 +14,7 @@ define('COOKIETRACTOR_PLUGIN_DIR', plugin_dir_path(__FILE__));
 
 require_once __DIR__ . '/src/startup.php';
 
-$ct = new CookieTractor();
+$ct = new CookieTractor\CookieTractor();
 $ct->init();
 
 ?>

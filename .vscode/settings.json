@@ -8,7 +8,8 @@
     "atts"
   ],
   "intelephense.environment.includePaths": [
-    "vendor/wordpress-stubs/wordpress-stubs.php"
+    "vendor/wordpress-stubs/wordpress-stubs.php",
+    "vendor/wordpress-stubs"
   ]
 
 }
