@@ -1,7 +1,8 @@
 {
   "files.exclude": {
     "node_modules": true,
-    "plugin/assets/bundles": true
+    "plugin/assets/bundles": true,
+    "build": true
   },
   "cSpell.words": [
     "atts"
