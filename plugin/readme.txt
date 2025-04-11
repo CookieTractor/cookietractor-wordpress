@@ -105,6 +105,14 @@ Opens the cookie popup for visitors to change there consent.
 [cookietractor_declaration]
 Renders our cookie declaration table on your page
 
+== External services ==
+This plugin connected to the CookieTractor API to fetch consent information, it also include frontend-scripts from the following domains to render the cookie consent screen:
+
+* cdn.cookietractor.com
+* cdn-eu.cookietractor.com
+
+This service is provided by [CookieTractor](https://www.cookietractor.com/): [terms of use](https://www.cookietractor.com/terms-of-use)
+
 ## Screenshots ##
 
 1. Banner example
