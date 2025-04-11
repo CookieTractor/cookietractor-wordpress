@@ -9,6 +9,8 @@
 * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 **/
 
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
 define('COOKIETRACTOR_MAIN_FILE', __FILE__);
 define('COOKIETRACTOR_PLUGIN_DIR', plugin_dir_path(__FILE__));
 
