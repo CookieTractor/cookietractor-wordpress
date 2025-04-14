@@ -1,10 +1,10 @@
 # CookieTractor #
 * Contributors: cookietractor
-* Tags: cookie banner,cookie, GDPR, cookie policy, cmp,
-* Requires at least: 4.4
-* Tested up to: 6.7.1
+* Tags: cookie banner,cookie consent, GDPR, cookie policy, cmp
+* Requires at least: 5.7
+* Tested up to: 6.7
 * Stable tag: 1.0.0
-* Requires PHP: 5.6
+* Requires PHP: 7.2
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -106,7 +106,7 @@ Opens the cookie popup for visitors to change there consent.
 Renders our cookie declaration table on your page
 
 == External services ==
-This plugin connected to the CookieTractor API to fetch consent information, it also include frontend-scripts from the following domains to render the cookie consent screen:
+This plugin might connect to the CookieTractor API to fetch consent, cookie and status information. It also include frontend-scripts from the following domains to render the cookie consent screen and optionally the cookie declaration:
 
 * cdn.cookietractor.com
 * cdn-eu.cookietractor.com
