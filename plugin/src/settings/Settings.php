@@ -42,8 +42,35 @@ class Settings {
      */
     public function add_settings() {
         add_option('cookietractor_use_site_language', 'on');
-        register_setting('cookietractor', 'cookietractor_website_code','string');
-        register_setting('cookietractor', 'cookietractor_use_site_language','string');
+
+        register_setting('cookietractor', 'cookietractor_website_code',
+        array(
+			'type' => 'string',
+            'sanitize_callback' => array($this,'setting_html_script_sanitizer'),
+			'default' => NULL,
+			));
+
+        register_setting('cookietractor', 'cookietractor_use_site_language',
+            array(
+			'type' => 'string',
+			'sanitize_callback' => 'sanitize_text_field',
+			'default' => NULL,
+			));
+    }
+
+    /**
+     * Sanitizer for the website code setting, allowing only a script tag with certain attributes.
+     * @param mixed $value
+     * @return string
+     */
+    public function setting_html_script_sanitizer($value){
+        return wp_kses( $value, [
+            'script' => [
+                'src'  => true,
+                'data-id'  => true,
+                'data-lang'  => true,
+            ],
+        ] );
     }
 
     public function cookietractor_sanitize_website_code($input){
