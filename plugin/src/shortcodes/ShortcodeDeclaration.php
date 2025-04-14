@@ -20,11 +20,17 @@ class ShortcodeDeclaration {
 
         $parser = new WebsiteCodeParser($website_code);
 
+        $scriptTag = wp_get_script_tag(array(
+            'src'      => 'https://' . $parser->cdnHost . '/cookietractor-declaration.js',
+            'data-id' => $parser->websiteKey,
+            'data-lang' => $parser->culture,
+            'defer' => true
+        ));
+
         $html = '<div class="is-layout-constrained">';
-        // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
-        $html .=   '<script src="https://'.esc_attr($parser->cdnHost).'/cookietractor-declaration.js" data-lang="'.esc_attr($parser->getCulture()).'" data-id="'.esc_attr($parser->websiteKey).'" defer></script>';
         $html .=   '<div id="CookieDeclaration"></div>';
         $html .= '</div>';
+        $html .= $scriptTag;
         return $html;
 
     }

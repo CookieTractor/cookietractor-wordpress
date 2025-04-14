@@ -9,6 +9,7 @@ class Frontend {
 
     public function init() {
         add_filter('wp_head', array($this,'add_cookietractor_header'), -2147483648);
+
     }
 
     public function add_cookietractor_header() {
@@ -19,9 +20,13 @@ class Frontend {
             $parser = new WebsiteCodeParser($website_code);
 
             if($parser->websiteKey != '') {
-                // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
-                ?><script src="https://<?php echo esc_html($parser->cdnHost)?>/cookietractor.js" data-lang="<?php echo esc_html($parser->getCulture())?>" data-id="<?php echo esc_html($parser->websiteKey)?>"></script>
-<?php
+
+                wp_print_script_tag( array(
+                    'src'      => 'https://' . $parser->cdnHost . '/cookietractor.js',
+                    'data-id' => $parser->websiteKey,
+                    'data-lang' => $parser->culture
+                ));
+
             }
         }
 
