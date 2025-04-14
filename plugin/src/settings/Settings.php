@@ -43,6 +43,7 @@ class Settings {
     public function add_settings() {
         add_option('cookietractor_use_site_language', 'on');
 
+        // phpcs:ignore PluginCheck.CodeAnalysis.SettingSanitization.register_settingDynamic
         register_setting('cookietractor', 'cookietractor_website_code',
         array(
 			'type' => 'string',
@@ -50,6 +51,7 @@ class Settings {
 			'default' => NULL,
 			));
 
+        // phpcs:ignore PluginCheck.CodeAnalysis.SettingSanitization.register_settingDynamic
         register_setting('cookietractor', 'cookietractor_use_site_language',
             array(
 			'type' => 'string',
