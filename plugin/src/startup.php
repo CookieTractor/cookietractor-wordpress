@@ -11,7 +11,6 @@ require_once __DIR__ . '/settings/Settings.php';
 require_once __DIR__ . '/frontend/Frontend.php';
 require_once __DIR__ . '/shortcodes/ShortcodeOpenPopup.php';
 require_once __DIR__ . '/shortcodes/ShortcodeDeclaration.php';
-require_once __DIR__ . '/utilities/CookieReader.php';
 
 class CookieTractor {
 
