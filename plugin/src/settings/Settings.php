@@ -67,7 +67,7 @@ class Settings {
      * Hook-function that adds a "Settings"-link next to the plugin in the plugin list
      */
     public function add_settings_link($links) {
-        $settings_link = '<a href="options-general.php?page=cookietractor-settings">Settings</a>';
+        $settings_link = '<a href="admin.php?page=cookietractor">Settings</a>';
         array_unshift($links, $settings_link); // put it first
         return $links;
     }
