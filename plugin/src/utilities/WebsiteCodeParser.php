@@ -10,7 +10,14 @@ class WebsiteCodeParser {
     public string $cdnHost;
     public string $culture;
 
-    public function __construct(string $websiteCode) {
+    public function __construct(?string $websiteCode) {
+
+        $this->websiteKey='';
+        $this->src='';
+        $this->cdnHost = '';
+
+        if($websiteCode == null || $websiteCode =='')
+            return;
 
         try
         {
