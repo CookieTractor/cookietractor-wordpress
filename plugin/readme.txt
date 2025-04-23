@@ -99,10 +99,10 @@ Have questions or need help?
 
 **👨🏼‍💻 Shortcodes**
 
-[cookietractor_popup text="Open cookie settings"]
+`[cookietractor_popup text="Open cookie settings"]`
 Opens the cookie popup for visitors to change there consent.
 
-[cookietractor_declaration]
+`[cookietractor_declaration]`
 Renders our cookie declaration table on your page
 
 == External services ==
