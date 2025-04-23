@@ -18,73 +18,73 @@ Visit our [website](https://www.cookietractor.com)
 
 ## 🎯 Features ##
 
-** 🛡️ Legal Compliance **
+**🛡️ Legal Compliance**
 With CookieTractor, your website meets the requirements of the ePrivacy Directive and GDPR.
 No cookies that require consent are set until the visitor has made their choice – unlike many simpler solutions.
 
-** ♿ Great Accessibility **
+**♿ Great Accessibility**
 CookieTractor makes it easy for everyone to understand cookie choices.
 ✅ Clear, plain language
 ✅ Keyboard/screen reader support
 ✅ WCAG 2.2 AAA compliant
 ✅ Perfectly mobile-friendly 📱
 
-** 🧠 Simplest Possible Choice **
+**🧠 Simplest Possible Choice**
 Visitors can choose:
 ✔️ Accept all
 ✔️ Only necessary
 For those who want to customize – no problem. It’s just as easy, with no hidden settings or confusion.
 
-** 🔍 All Cookies Explained **
+**🔍 All Cookies Explained**
 Curious visitors? CookieTractor provides details on every cookie.
 🔁 Monthly site scans
 🧠 Pre-filled info for common cookies
 ✍️ Easily customize descriptions for your own cookies
 
-** 🔄 Change Consent Anytime **
+**🔄 Change Consent Anytime**
 Visitors can change their cookie choices at any time.
 🔗 Add a “change consent” link wherever you like (e.g. footer).
 CookieTractor makes sure you’re compliant.
 
-** 🌍 Multi-Language Support **
+**🌍 Multi-Language Support**
 Running a multilingual website?
 CookieTractor supports 29 languages including:
 🇬🇧 English, 🇸🇪 Swedish, 🇩🇰 Danish, 🇫🇮 Finnish, 🇳🇴 Norwegian, 🇫🇷 French, 🇩🇪 German, 🇮🇹 Italian, 🇪🇸 Spanish, 🇨🇳 Chinese, 🇯🇵 Japanese, 🇰🇷 Korean – and many more!
 Don't see your language? Let us know and we’ll add it!
 
-** 🎨 Customizable Appearance **
+**🎨 Customizable Appearance**
 Make the banner match your website!
 🎨 Customize colors, fonts, border radius
 💻 Write custom CSS for advanced styling
 
-** 🎥 YouTube and Vimeo Integration **
+**🎥 YouTube and Vimeo Integration**
 YouTube and Vimeo set cookies automatically.
 🎬 CookieTractor blocks them until the visitor accepts marketing cookies.
 🛑 ➡️ ✅ Visitors can choose to accept and view videos.
 
-** ⚡ High Performance **
+**⚡ High Performance**
 Cookie banners must load fast – and ours does.
 🚀 Optimized code
 📦 Less than 20 kB
 🌐 Served via ultra-fast CDN
 🗂️ Option to restrict to EU servers for extra compliance
 
-** 🌱 Low Climate Impact **
+**🌱 Low Climate Impact**
 Efficient code = greener web 🌍
 🍃 60–80% smaller file size than competitors
 📉 Less data = less energy used
 ✅ A better choice for the environment
 
-** 🇸🇪 A Swedish Solution **
+**🇸🇪 A Swedish Solution**
 💡 100% Swedish innovation
 📁 All data stored on EU servers
 
-** 💰 Pricing **
+**💰 Pricing**
 ✅ 30-day free trial – no credit card required!
 💳 After that, pay securely via card.
 Simple, transparent pricing.
 
-** ⚙️ Installation **
+**⚙️ Installation**
 📝 Sign up at [https://www.cookietractor.com](cookietractor.com)
 🧰 Follow the simple setup instructions
 🎨 Customize your banner’s appearance
@@ -92,12 +92,12 @@ Simple, transparent pricing.
 
 Full installation guide available at: [https://www.cookietractor.com/setup-instructions](cookietractor.com/setup-instructions)
 
-** 🆘 Support **
+**🆘 Support**
 Have questions or need help?
 📚 Check out our [FAQ](https://www.cookietractor.com/faq)
 📬 Or contact us directly through our [website](https://www.cookietractor.com)
 
-** 👨🏼‍💻 Shortcodes **
+**👨🏼‍💻 Shortcodes**
 
 [cookietractor_popup text="Open cookie settings"]
 Opens the cookie popup for visitors to change there consent.
@@ -127,6 +127,5 @@ This service is provided by [CookieTractor](https://www.cookietractor.com/): [te
 Here you can see the changes made in each release of the plugin.
 
 ### 1.0.0 ###
-Release date: Month 00th 20xx
-
+Release date: April 23 2025
 Initial release that supports adding the header scripts to your WordPress site based on settings. Also included shortcodes for opening the popup and rendering cookie declaration.
