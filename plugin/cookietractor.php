@@ -3,7 +3,7 @@
 * Plugin Name: CookieTractor
 * Plugin URI: https://www.cookietractor.com/
 * Description: CookieTractor plugin for Wordpress
-* Version: 1.0.0
+* Version: 1.0.1
 * Author: cookietractor
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
