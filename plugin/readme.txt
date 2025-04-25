@@ -3,7 +3,7 @@
 * Tags: cookie banner,cookie consent, GDPR, cookie policy, cmp
 * Requires at least: 5.7
 * Tested up to: 6.7
-* Stable tag: 1.0.1
+* Stable tag: 1.0.2
 * Requires PHP: 7.2
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,7 +14,7 @@ CookieTractor – The User-Friendly Cookie Banner
 
 CookieTractor offers an intuitive and accessible cookie consent solution designed to help your WordPress website comply with privacy regulations such as the GDPR and the ePrivacy Directive. Our cookie banner ensures that no cookies requiring consent are set until the visitor has made their choice, providing a seamless and compliant user experience.
 
-Visit our [website](https://www.cookietractor.com)
+Visit our [website](https://www.cookietractor.com?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
 
 ## 🎯 Features ##
 
@@ -85,17 +85,17 @@ Efficient code = greener web 🌍
 Simple, transparent pricing.
 
 **⚙️ Installation**
-📝 Sign up at [https://www.cookietractor.com](cookietractor.com)
+📝 Sign up at [cookietractor.com](https://www.cookietractor.com?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
 🧰 Follow the simple setup instructions
 🎨 Customize your banner’s appearance
 🔌 Copy the code snippet into your WordPress site
 
-Full installation guide available at: [https://www.cookietractor.com/setup-instructions](cookietractor.com/setup-instructions)
+Full installation guide available at: [cookietractor.com/setup-instructions](https://www.cookietractor.com/setup-instructions?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
 
 **🆘 Support**
 Have questions or need help?
-📚 Check out our [FAQ](https://www.cookietractor.com/faq)
-📬 Or contact us directly through our [website](https://www.cookietractor.com)
+📚 Check out our [FAQ](https://www.cookietractor.com/faq?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
+📬 Or contact us directly through our [website](https://www.cookietractor.com?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
 
 **👨🏼‍💻 Shortcodes**
 
@@ -111,7 +111,7 @@ This plugin might connect to the CookieTractor API to fetch consent, cookie and 
 * cdn.cookietractor.com
 * cdn-eu.cookietractor.com
 
-This service is provided by [CookieTractor](https://www.cookietractor.com/): [terms of use](https://www.cookietractor.com/terms-of-use)
+This service is provided by [CookieTractor](https://www.cookietractor.com?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory): [terms of use](https://www.cookietractor.com/terms-of-use?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
 
 ## Screenshots ##
 
@@ -125,6 +125,12 @@ This service is provided by [CookieTractor](https://www.cookietractor.com/): [te
 
 ## Changelog ##
 Here you can see the changes made in each release of the plugin.
+
+### 1.0.2 ###
+Readme updates
+
+### 1.0.1 ###
+Readme updates
 
 ### 1.0.0 ###
 Release date: April 23 2025

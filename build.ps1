@@ -1,5 +1,5 @@
 # 🔢 Set version here
-$version = "1.0.1"
+$version = "1.0.2"
 
 # Paths
 $pluginName = "cookietractor"
