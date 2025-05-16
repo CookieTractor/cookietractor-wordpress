@@ -16,7 +16,7 @@ class Frontend {
 
         $website_code = get_option('cookietractor_website_code');
 
-        if(is_front_page() && !empty($website_code)) {
+        if(!is_admin() && !empty($website_code)) {
             $parser = new WebsiteCodeParser($website_code);
 
             if($parser->websiteKey != '') {
