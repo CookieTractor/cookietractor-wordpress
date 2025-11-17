@@ -18,7 +18,7 @@ require_once __DIR__ . '/shortcodes/ShortcodeWpConsentApi.php';
 
 class CookieTractor {
 
-    const COOKIETRACTOR_PLUGIN_VERSION = "1.0.4";
+    const COOKIETRACTOR_PLUGIN_VERSION = "1.1.0";
 
     /** Inits the CookieTractor Wordpress Plugin */
     public function init() {

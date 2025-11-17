@@ -2,8 +2,8 @@
 * Contributors: cookietractor
 * Tags: cookie banner,cookie consent, GDPR, cookie policy, cmp
 * Requires at least: 5.7
-* Tested up to: 6.7
-* Stable tag: 1.0.3
+* Tested up to: 6.8
+* Stable tag: 1.1.0
 * Requires PHP: 7.2
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -125,6 +125,9 @@ This service is provided by [CookieTractor](https://www.cookietractor.com?utm_so
 
 ## Changelog ##
 Here you can see the changes made in each release of the plugin.
+
+### 1.1.0 ###
+Added support for [WP Consent API](https://wordpress.org/plugins/wp-consent-api). Just install `WP Consent API` into your website to activate the integration.
 
 ### 1.0.3 ###
 Fixed an issue where the script was only loading on the front page instead of across all pages.
