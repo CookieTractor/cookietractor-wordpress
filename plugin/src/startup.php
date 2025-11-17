@@ -4,13 +4,17 @@ namespace CookieTractor;
 
 use CookieTractor\Frontend\Frontend;
 use CookieTractor\Settings\Settings;
+use CookieTractor\Utilities\WPConsentAPIHelper;
 use CookieTractor\Shortcodes\ShortcodeDeclaration;
 use CookieTractor\Shortcodes\ShortcodeOpenPopup;
+use CookieTractor\Shortcodes\ShortcodeWpConsentApi;
 
 require_once __DIR__ . '/settings/Settings.php';
 require_once __DIR__ . '/frontend/Frontend.php';
+require_once __DIR__ . '/utilities/WPConsentAPIHelper.php';
 require_once __DIR__ . '/shortcodes/ShortcodeOpenPopup.php';
 require_once __DIR__ . '/shortcodes/ShortcodeDeclaration.php';
+require_once __DIR__ . '/shortcodes/ShortcodeWpConsentApi.php';
 
 class CookieTractor {
 
@@ -23,11 +27,17 @@ class CookieTractor {
         $frontend = new Frontend();
         $frontend->init();
 
+        $wpConsentApi = new WPConsentAPIHelper();
+        $wpConsentApi->register_hooks();
+
         $shortcodePopup = new ShortcodeOpenPopup();
         $shortcodePopup->init();
 
         $shortcodePopup = new ShortcodeDeclaration();
         $shortcodePopup->init();
+
+        $shortcodeConsentApi = new ShortcodeWpConsentApi();
+        $shortcodeConsentApi->init();
     }
 }
 
