@@ -2,8 +2,10 @@
 namespace CookieTractor\Settings;
 
 use CookieTractor\Utilities\WebsiteCodeParser;
+use CookieTractor\Utilities\WPConsentAPIHelper;
 
 require_once __DIR__ . './../utilities/WebsiteCodeParser.php';
+require_once __DIR__ . './../utilities/WPConsentAPIHelper.php';
 
 class Settings {
 
@@ -133,45 +135,67 @@ class Settings {
                 </div>
             </div>
             <div class="cookietractor-settings__content">
+                <div class="cookietractor-settings__inner">
+                    <div>
+                        <form method="post" action="options.php">
+                            <?php settings_fields('cookietractor'); ?>
+                            <?php if($websiteCode == ''){ ?>
+                                <div class="cookietractor-alert cookietractor-alert__warning">
+                                    <p>Create your account at <a href="https://www.cookietractor.com/?utm_source=plugin&utm_medium=admin&utm_campaign=WordPress" target="_blank">cookietractor.com</a></p>
+                                </div>
+                            <?php } ?>
+                            <table class="form-table">
 
-                <form method="post" action="options.php">
-                    <?php settings_fields('cookietractor'); ?>
-                    <?php if($websiteCode == ''){ ?>
-                        <div class="cookietractor-alert cookietractor-alert__warning">
-                            <p>Create your account at <a href="https://www.cookietractor.com/?utm_source=plugin&utm_medium=admin&utm_campaign=WordPress" target="_blank">cookietractor.com</a></p>
+                            <tr>
+                                <th>
+                                    <label for="websitekey">Website code:</label>
+                                    <p>Paste your installation code</p>
+                                </th>
+                                <td>
+                                    <textarea name="cookietractor_website_code"
+                                        placeholder="E.g: &lt;script src=&quot;https://cdn.cookietractor.com/cookietractor.js&quot; data-lang=&quot;en-US&quot; data-id=&quot;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;&gt;&lt;/script&gt;"
+                                        class="large-text code"><?php echo esc_html(get_option('cookietractor_website_code')); ?></textarea>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label for="websitekey">Use Site Language</label>
+                                    <p>Used Site Language as default language for consent screen.</p>
+                                </th>
+                                <td>
+                                    <input type="checkbox" name="cookietractor_use_site_language" <?php echo $useSiteLanguage=='on' ? 'checked' : '' ?> />
+                                </td>
+                            </tr>
+
+                            </table>
+
+                            <?php if($parser->websiteKey != ''){?>
+                            <a href="https://app.cookietractor.com/Tool#!/website/<?php echo esc_html($parser->websiteKey)?>/overview" target="_blank">Go to website settings</a>
+                            <?php }?>
+                            <?php submit_button(); ?>
+                        </from>
+                    </div>
+                    <?php
+                    $showSidebar = false;
+                    $wpConserntApiHelper =new WPConsentAPIHelper();
+                    $wpConsentApiActive = $wpConserntApiHelper->is_wp_consent_api_active();
+
+                    $showSidebar = $wpConsentApiActive;
+                    ?>
+                    <?php if($showSidebar) { ?>
+                    <div>
+                        <div class="cookietractor-box">
+                            <ul>
+                                <?php if($wpConsentApiActive) { ?>
+                                <li>✅ <strong>WP Consent API</strong><br/> The integration is active</li>
+                                <?php } ?>
+                            </ul>
+
                         </div>
+                    </div>
                     <?php } ?>
-                    <table class="form-table">
-
-                    <tr>
-                        <th>
-                            <label for="websitekey">Website code:</label>
-                            <p>Paste your installation code</p>
-                        </th>
-                        <td>
-                            <textarea name="cookietractor_website_code"
-                                placeholder="E.g: &lt;script src=&quot;https://cdn.cookietractor.com/cookietractor.js&quot; data-lang=&quot;en-US&quot; data-id=&quot;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;&gt;&lt;/script&gt;"
-                                class="large-text code"><?php echo esc_html(get_option('cookietractor_website_code')); ?></textarea>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <label for="websitekey">Use Site Language</label>
-                            <p>Used Site Language as default language for consent screen.</p>
-                        </th>
-                        <td>
-                            <input type="checkbox" name="cookietractor_use_site_language" <?php echo $useSiteLanguage=='on' ? 'checked' : '' ?> />
-                        </td>
-                    </tr>
-
-                    </table>
-
-                    <?php if($parser->websiteKey != ''){?>
-                    <a href="https://app.cookietractor.com/Tool#!/website/<?php echo esc_html($parser->websiteKey)?>/overview" target="_blank">Go to website settings</a>
-                    <?php }?>
-                    <?php submit_button(); ?>
-                </from>
+                </div>
             </div>
         </div>
 
