@@ -5,6 +5,12 @@
  */
 export function registerListenerForWpConsentApi(){
 
+    if(typeof window['wp_set_consent'] == 'function')
+    {
+        // Setting consent type to optin by default. This COULD be varied by region but let's ignore that for now.
+        window.wp_consent_type = 'optin';
+    }
+
     window.addEventListener('CookieConsent', (event) => {
 
         if(typeof window['wp_set_consent'] != 'function')
@@ -23,6 +29,9 @@ export function registerListenerForWpConsentApi(){
         window.wp_set_consent!('statistics',event.detail.current.includes('statistical') ? 'allow' : 'deny');
         window.wp_set_consent!('statistics-anonymous',event.detail.current.includes('statistical') ? 'allow' : 'deny');
 
+        // dispatch event when consent type is defined.
+        // This is useful if the region is detected server side, so the consent type is defined later during the pageload
+        document.dispatchEvent(new CustomEvent('wp_consent_type_defined'));
     });
 
 }
