@@ -29,7 +29,7 @@ class WebsiteCodeParser {
 
             $this->src = $script->getAttribute('src');
             $this->websiteKey = $script->getAttribute('data-id');
-            $this->culture = $script->getAttribute('data-lang');
+            $this->culture = $this->getCulture($script);
 
             $scriptUrl = wp_parse_url($script->getAttribute('src'));
             $this->cdnHost = $scriptUrl['host'] ?? '';
@@ -45,14 +45,15 @@ class WebsiteCodeParser {
 
     }
 
-    public function getCulture() {
+    public function getCulture($script) {
         $useWebsiteLanguage = get_option('cookietractor_use_site_language') == 'on';
         if($useWebsiteLanguage)
         {
             return str_replace('_','-',get_locale());
         }
 
-        return $this->culture;
+        return $script->getAttribute('data-lang');
+
     }
 
 }
