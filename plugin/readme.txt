@@ -12,95 +12,57 @@ CookieTractor – The User-Friendly Cookie Banner
 
 ## Description ##
 
-CookieTractor offers an intuitive and accessible cookie consent solution designed to help your WordPress website comply with privacy regulations such as the GDPR and the ePrivacy Directive. Our cookie banner ensures that no cookies requiring consent are set until the visitor has made their choice, providing a seamless and compliant user experience.
+CookieTractor is the user-friendly cookie consent solution for WordPress websites.
+
+The platform helps website owners manage cookies and consent in support of GDPR, ePrivacy requirements, and Google Consent Mode. By connecting your WordPress website to CookieTractor, you can manage consent, cookie information, and visitor choices through a dedicated consent management platform.
+
+CookieTractor is a Google Certified CMP Partner and is developed and operated within the European Union.
 
 Visit our [website](https://www.cookietractor.com?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
 
-## 🎯 Features ##
+## Consent Management for WordPress ##
 
-**🛡️ Legal Compliance**
-With CookieTractor, your website meets the requirements of the ePrivacy Directive and GDPR.
-No cookies that require consent are set until the visitor has made their choice – unlike many simpler solutions.
+A cookie banner is only one part of consent management.
 
-**♿ Great Accessibility**
-CookieTractor makes it easy for everyone to understand cookie choices.
-✅ Clear, plain language
-✅ Keyboard/screen reader support
-✅ WCAG 2.2 AAA compliant
-✅ Perfectly mobile-friendly 📱
+Website owners also need to provide information about cookies, respect visitor choices, keep cookie information up to date, and make it easy for visitors to review or change their consent settings.
 
-**🧠 Simplest Possible Choice**
-Visitors can choose:
-✔️ Accept all
-✔️ Only necessary
-For those who want to customize – no problem. It’s just as easy, with no hidden settings or confusion.
+CookieTractor brings these parts together in a single solution designed for WordPress.
 
-**🔍 All Cookies Explained**
-Curious visitors? CookieTractor provides details on every cookie.
-🔁 Monthly site scans
-🧠 Pre-filled info for common cookies
-✍️ Easily customize descriptions for your own cookies
+The solution includes a customizable cookie banner, consent management tools, cookie documentation, script control, and support for ongoing maintenance as websites evolve over time.
 
-**🔄 Change Consent Anytime**
-Visitors can change their cookie choices at any time.
-🔗 Add a “change consent” link wherever you like (e.g. footer).
-CookieTractor makes sure you’re compliant.
+## Google Consent Mode v2 ##
+CookieTractor is a Google Certified CMP Partner and supports Google Consent Mode v2.
 
-**🌍 Multi-Language Support**
-Running a multilingual website?
-CookieTractor supports 29 languages including:
-🇬🇧 English, 🇸🇪 Swedish, 🇩🇰 Danish, 🇫🇮 Finnish, 🇳🇴 Norwegian, 🇫🇷 French, 🇩🇪 German, 🇮🇹 Italian, 🇪🇸 Spanish, 🇨🇳 Chinese, 🇯🇵 Japanese, 🇰🇷 Korean – and many more!
-Don't see your language? Let us know and we’ll add it!
+Whether you use Google Tag Manager, Google Tag Gateway, or direct Google tag implementations, CookieTractor helps manage consent signals for Google's services.
 
-**🎨 Customizable Appearance**
-Make the banner match your website!
-🎨 Customize colors, fonts, border radius
-💻 Write custom CSS for advanced styling
+## Cookie Scanning and Cookie Documentation ##
+Websites change over time. New plugins, embedded content, analytics tools, and marketing platforms can introduce new cookies and tracking technologies.
 
-**🎥 YouTube and Vimeo Integration**
-YouTube and Vimeo set cookies automatically.
-🎬 CookieTractor blocks them until the visitor accepts marketing cookies.
-🛑 ➡️ ✅ Visitors can choose to accept and view videos.
+CookieTractor regularly scans your website and helps keep your cookie list up to date. Visitors can review detailed cookie information directly in the consent dialog, while website owners can supplement the cookie list with their own descriptions when needed.
 
-**⚡ High Performance**
-Cookie banners must load fast – and ours does.
-🚀 Optimized code
-📦 Less than 20 kB
-🌐 Served via ultra-fast CDN
-🗂️ Option to restrict to EU servers for extra compliance
+## WP Consent API Integration ##
+CookieTractor integrates with the [WP Consent API](https://wordpress.org/plugins/wp-consent-api/).
 
-**🌱 Low Climate Impact**
-Efficient code = greener web 🌍
-🍃 60–80% smaller file size than competitors
-📉 Less data = less energy used
-✅ A better choice for the environment
+When visitors update their consent choices, compatible WordPress plugins can use that information through a standardized consent framework. This helps create a more consistent consent experience across your website and reduces the need for custom integrations.
 
-**🇸🇪 A Swedish Solution**
-💡 100% Swedish innovation
-📁 All data stored on EU servers
+## Built with Accessibility in Mind ##
+The cookie banner is often one of the first interfaces a visitor encounters on a website.
 
-**💰 Pricing**
-✅ 30-day free trial – no credit card required!
-💳 After that, pay securely via card.
-Simple, transparent pricing.
+CookieTractor is designed to support keyboard navigation, screen readers, and modern accessibility requirements. Clear information, understandable choices, and equal access are important parts of a good consent experience.
 
-**⚙️ Installation**
-📝 Sign up at [cookietractor.com](https://www.cookietractor.com?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
-🧰 Follow the simple setup instructions
-🎨 Customize your banner’s appearance
-🔌 Copy the code snippet into your WordPress site
+The goal is to help visitors make informed choices and make it easy to review or change those choices over time.
 
-**🤖 WP Consent API**
-Fully integrated with [WP Consent API](https://wordpress.org/plugins/wp-consent-api/) to standardize the consent communication between WordPress Plugins.
+## Multilingual Websites ##
+CookieTractor supports multilingual websites and includes translations for dozens of languages.
 
-Full installation guide available at: [cookietractor.com/setup-instructions](https://www.cookietractor.com/setup-instructions?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
+Visitors can interact with the consent dialog in their preferred language, helping create a consistent experience across international websites.
 
-**🆘 Support**
-Have questions or need help?
-📚 Check out our [FAQ](https://www.cookietractor.com/faq?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
-📬 Or contact us directly through our [website](https://www.cookietractor.com?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
+## Links ##
+Documentation, setup guides, and technical references are available at: [https://www.cookietractor.com/documentation](https://www.cookietractor.com/documentation?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
 
-**👨🏼‍💻 Shortcodes**
+Learn more about CookieTractor: [https://www.cookietractor.com](https://www.cookietractor.com?utm_source=wordpress&utm_medium=plugin&utm_campaign=plugin_directory)
+
+## Shortcodes ##
 
 `[cookietractor_popup text="Open cookie settings"]`
 Opens the cookie popup for visitors to change there consent.
