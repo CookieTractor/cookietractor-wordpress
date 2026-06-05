@@ -2,8 +2,8 @@
 * Contributors: cookietractor
 * Tags: cookie banner,cookie consent, GDPR, cookie policy, cmp
 * Requires at least: 5.7
-* Tested up to: 6.9
-* Stable tag: 1.1.4
+* Tested up to: 7.0
+* Stable tag: 1.1.5
 * Requires PHP: 7.2
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -128,6 +128,9 @@ This service is provided by [CookieTractor](https://www.cookietractor.com?utm_so
 
 ## Changelog ##
 Here you can see the changes made in each release of the plugin.
+
+### 1.1.5 ###
+Fixed issue with the "Use Website Language"-feature, ensure plugin works on WP 7.0.0
 
 ### 1.1.4 ###
 Tested on WordPress 6.9, updated "Tested up to" in readme.
