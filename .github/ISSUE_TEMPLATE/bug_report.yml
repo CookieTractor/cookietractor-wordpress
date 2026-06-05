@@ -1,0 +1,53 @@
+name: Bug report
+description: Report an issue with the CookieTractor WordPress plugin
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: plugin-version
+    attributes:
+      label: CookieTractor plugin version
+      description: Which version of the CookieTractor WordPress plugin are you using?
+      placeholder: "Example: 1.2.3"
+    validations:
+      required: true
+
+  - type: input
+    id: wordpress-version
+    attributes:
+      label: WordPress version
+      description: Which version of WordPress is the site running?
+      placeholder: "Example: 6.5.4"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Short description of the issue
+      description: Briefly describe what is not working as expected.
+      placeholder: "Example: The cookie banner does not appear after activating the plugin."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: List the steps needed to reproduce the issue.
+      placeholder: |
+        1. Install and activate the CookieTractor plugin
+        2. Configure ...
+        3. Visit ...
+        4. See ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+      placeholder: "Example: The cookie banner should be shown on the first page visit."
+    validations:
+      required: true
